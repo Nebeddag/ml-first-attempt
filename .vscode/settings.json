@@ -1,5 +1,3 @@
 {
-    "tmp1": "${config.python.pythonPath}",
-    "tmp2": "C:\\ProgramData\\Anaconda3\\python.exe",
     "python.pythonPath": "C:\\ProgramData\\Anaconda3\\python.exe"
 }
