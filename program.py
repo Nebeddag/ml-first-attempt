@@ -1,11 +1,14 @@
 # %%
 import numpy as np
 import pandas as pd
+
 import torch.autograd
-from torch.autograd import Variable
 import torch.nn.functional as f
+from torch.autograd import Variable
+
 import matplotlib.pyplot as plt
-import helpers.dataloader as dloader
+
+import ml_models as models
 
 # %%
 # loading data
@@ -34,3 +37,4 @@ print(exmpl_y)
 x_data = Variable(torch.from_numpy(np_x))
 y_data = Variable(torch.from_numpy(np_y.reshape(-1 ,1)))
 
+#models.
