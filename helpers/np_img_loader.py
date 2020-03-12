@@ -13,7 +13,7 @@ def read_and_flat_imgs(path: str):
 
     im1 = Image.open(onlyfiles[0])
     p1 = np.array(im1).flatten()
-    examples_arr = np.zeros((p1.shape[0], len(onlyfiles)), bytes)
+    examples_arr = np.zeros((p1.shape[0], len(onlyfiles)))
 
     for i in range(len(onlyfiles)):
         im = Image.open(onlyfiles[i])
