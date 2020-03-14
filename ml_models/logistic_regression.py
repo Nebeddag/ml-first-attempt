@@ -1,11 +1,11 @@
-import torch.nn.functional as F
-import torch.autograd
-from torch.autograd import Variable
+from torch import nn, optim, from_numpy
 
-class LogisticRegression(torch.nn.Module):
-     def __init__(self):
+
+class LogisticRegression(nn.Module):
+    def __init__(self, input_dim, output_dim):
         super(LogisticRegression, self).__init__()
-        self.linear = torch.nn.Linear(1, 1)
-     def forward(self, x):
-        y_pred = F.sigmoid(self.linear(x))
-        return y_pred()
+        self.linear = nn.Linear(input_dim, output_dim)
+
+    def forward(self, x):
+        y_pred = nn.sigmoid(self.linear(x))
+        return y_pred

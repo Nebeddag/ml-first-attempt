@@ -8,7 +8,7 @@ from torch.autograd import Variable
 
 import matplotlib.pyplot as plt
 
-import ml_models as models
+import ml_models.train_model as mdl
 
 # %%
 # loading data
@@ -34,7 +34,14 @@ plt.imshow(exmpl_img)
 print(exmpl_y)
 
 # %%
-x_data = Variable(torch.from_numpy(np_x))
-y_data = Variable(torch.from_numpy(np_y.reshape(-1 ,1)))
+x_data = torch.from_numpy(np_x)
+y_data = torch.from_numpy(np_y.reshape(-1 ,1))
+#x_data = Variable(torch.from_numpy(np_x))
+#y_data = Variable(torch.from_numpy(np_y.reshape(-1 ,1)))
 
-#models.
+# %%
+mdl.train_model(x_data, y_data)
+
+
+
+# %%
