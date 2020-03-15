@@ -12,6 +12,7 @@ class SimpleNN(nn.Module):
         self.l3 = nn.Linear(h2_dim, out_dim)
 
         self.sigmoid = nn.Sigmoid()
+        self.relu = nn.ReLU()
 
     def forward(self, x):
         """
