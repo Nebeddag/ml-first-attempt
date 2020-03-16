@@ -1,15 +1,15 @@
 import numpy as np
-import helpers.np_img_loader as img_loader
+import loaders.np_img_loader as np_img_l
 
 dir_p = 'data\\photos1\\1\\'
 dir_n = 'data\\photos1\\0\\'
 output_fname = 'data\\photos1\\examples_flatten'
 
-positive = img_loader.read_and_flat_imgs(dir_p)
+positive = np_img_l.read_and_flat_imgs(dir_p)
 #print(np.shape(positive))
 #print(positive)
 
-negative = img_loader.read_and_flat_imgs(dir_n)
+negative = np_img_l.read_and_flat_imgs(dir_n)
 #print(np.shape(negative))
 #print(negative)
 

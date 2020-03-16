@@ -1,7 +1,7 @@
 def read_and_flat_imgs(path: str):
     """reading all pictures from path
 
-    Loads all images from folder, flattens and converts them to matrix.
+    Loads all images from folder, flattens and converts them to array.
     Returns numpy array.
     """
     import numpy as np

@@ -2,9 +2,8 @@
 import numpy as np
 import pandas as pd
 
-import torch.autograd
-import torch.nn.functional as f
-from torch.autograd import Variable
+import torch
+#from torch import nn, optim, from_numpy
 
 import matplotlib.pyplot as plt
 

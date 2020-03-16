@@ -11,9 +11,7 @@ def train_model(x_data, y_data):
 
     x_data = x_data.float()
     y_data = y_data.float()
-    model = SimpleNN(80*60*3, 20, 6, 1)
-    #model = LogisticRegression(80*60*3, 1)
-    #criterion = nn.BCELoss(reduction = 'mean')
+    model = SimpleNN(x_data.shape[1], 20, 6, 1)
     optimizer = optim.SGD(model.parameters(), lr=learning_rate)
 
     for epoch in range(epoch_count):
@@ -44,8 +42,6 @@ def train_model_ext(x_data, y_data, x_data_dev, y_data_dev):
     y_data_dev = y_data_dev.float()
 
     model = SimpleNN(x_data.shape[1], 20, 6, 1)
-    #model = LogisticRegression(80*60*3, 1)
-    #criterion = nn.BCELoss(reduction = 'mean')
     optimizer = optim.SGD(model.parameters(), lr=learning_rate)
 
     for epoch in range(epoch_count):
